@@ -2,6 +2,8 @@ package cn.cty.jiaoHuanPaiXu;
 
 import java.util.Arrays;
 
+import cn.cty.common.Common;
+
 /**
  * 
  * 冒泡排序
@@ -31,7 +33,7 @@ public class MaoPao {
 			for( int i=0 ; i<array.length ; i++ ) {
 				for( int j=1 ; j<array.length-i ; j++ ) {
 					if( array[j-1] > array [j] ) {
-						swap( array, j-1, j );
+						Common.swap( array, j-1, j );
 						flag = false;
 					}
 				}
@@ -47,30 +49,6 @@ public class MaoPao {
 		}
 
 	}// END FUNCTION sort
-	
-	
-	/**
-	 * 
-	 * @param array
-	 */
-	public static void sort_V2(int[] array) {
-
-		if (array != null && array.length > 0) {
-			
-		}
-		
-	}
 
 	
-	/**
-     * 交换数组中两个变量的值
-     * @param array
-     * @param i
-     * @param j
-     */
-    private static void swap(int[] array,int i,int j){
-        int temp=array[i];
-        array[i]=array[j];
-        array[j]=temp;
-    }
 }

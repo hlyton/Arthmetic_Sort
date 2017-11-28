@@ -1,6 +1,7 @@
 package cn.cty.zhiJieChaRuPaiXu;
 
 import java.util.Arrays;
+import cn.cty.common.*;
 
 /**
  * 
@@ -78,7 +79,7 @@ public class ZhiJieChaRu {
 				}
 				
 				if(temp != i) {
-					swap(array ,i ,temp);
+					Common.swap(array ,i ,temp);
 				}
 				
 				System.out.println(i + "次：" + Arrays.toString(array));
@@ -88,17 +89,5 @@ public class ZhiJieChaRu {
 		
 	}//END FUNCTION sort_V2
 	
-	
-	/**
-     * 交换数组中两个变量的值
-     * @param array
-     * @param i
-     * @param j
-     */
-    private static void swap(int[] array,int i,int j){
-        int temp=array[i];
-        array[i]=array[j];
-        array[j]=temp;
-    }
 	
 }
