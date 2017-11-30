@@ -3,6 +3,7 @@ package cn.cty;
 import java.util.Arrays;
 
 import cn.cty.jiaoHuanPaiXu.MaoPao;
+import cn.cty.zhiJieChaRuPaiXu.Xier;
 import cn.cty.zhiJieChaRuPaiXu.ZhiJieChaRu;
 
 /**
@@ -16,7 +17,7 @@ public class TestSortRun {
 	public static void main(String[] args) {
 		
 //		int[] arr = {8, 3, 2, 1, 7, 4, 6, 5};
-		int[] arr = new int[100];
+		int[] arr = new int[10];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = (int) (Math.random() * 100);
 		}
@@ -30,7 +31,8 @@ public class TestSortRun {
 			//ZhiJieChaRu.sort(arr);
 			//	插入排序 -- 直接插入
 			//ZhiJieChaRu.sort_V2(arr, false);
-			
+			//	插入排序 -- 希尔排序
+			Xier.sort(arr);
 			
 			//	交换排序 -- 冒泡
 			MaoPao.sort(arr);
