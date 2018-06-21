@@ -1,4 +1,4 @@
-package cn.cty.zhiJieChaRuPaiXu;
+package cn.cty.ChaRuPaiXu;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 
  * @author hlyton
  *
- * 次数 1
+ * 次数 0
  */
 public class Xier {
 
@@ -27,8 +27,8 @@ public class Xier {
 			
 			System.out.println("排序过程：" );
 			
+			int count			= 0; //单纯计数使用
 			int tmp 			= 0; //直接插入排序的临时存放容器
-			int count			= 0;
 			double arrLength= array.length;
 			int shellLength 	= 0; //分片长度
 			
@@ -38,7 +38,10 @@ public class Xier {
 				arrLength = Math.ceil( arrLength/2 );
 				shellLength = (int)arrLength;
 				
+				//System.out.println("shell:" + shellLength);
+				
 				//	按照分片数量排序
+				//	x 即分为shellLength组，随着分片减少，分片中的元素增多
 				forx:for (int x = 0; x < shellLength; x++) {
 					int j = 0;
 					fori:for (int i = x+shellLength; i < array.length; i+=shellLength) {
@@ -48,10 +51,14 @@ public class Xier {
 						
 						forj:for (; j>=0 && tmp<array[j]; j-=shellLength) {
 							array[j+shellLength] = array[j];
+							System.out.println("j：" + j + Arrays.toString(array));
 						}
 						
-						array[j+shellLength] = tmp;
+						array[j+shellLength] = tmp; //因为forj最后会j-=shellLength,所以这里的下标是j+shellLength
+						System.out.println("i：" + i + Arrays.toString(array));
 					}
+					
+					System.out.println("x：" + x + Arrays.toString(array));
 				}
 				
 				count++;
@@ -65,5 +72,16 @@ public class Xier {
 		}
 		
 	}//END FUNCTION sort
+	
+	
+	/**
+	 * 
+	 * @param arr
+	 */
+	public static void sort_V2(int[] arr) {
+		
+		
+		
+	}
 	
 }

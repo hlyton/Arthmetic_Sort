@@ -1,4 +1,4 @@
-package cn.cty.zhiJieChaRuPaiXu;
+package cn.cty.ChaRuPaiXu;
 
 import java.util.Arrays;
 import cn.cty.common.*;
